@@ -1,0 +1,260 @@
+
+
+/*############################## Defaults ####################/
+
+/* display the default elements as blocks */
+nav,
+header,
+footer {
+    display: block;
+}
+
+/* body */
+body {
+    line-height: 1; /* space between the text*/
+    margin: 0;      /* squeeze it with no defualt-margines*/
+}
+
+
+/* container */
+.container {
+    width: 100%;          /* full display */
+    margin: auto;        /* center */
+    padding-top: 4%;     /* space up */
+    padding-bottom: 4%;  /* space down */
+}
+
+/* row */
+.row {
+    width: 100%;
+    display: flex;        /* help the contains of the row to change siz */
+    flex-wrap: wrap;      /* wrap up the contents */
+    align-items: center;
+
+}
+
+/*  settings for new rows */
+.row::after {
+    display: table;   /* block */
+    clear: both;      /*removes any inheritting floats from right or left..etc*/
+    content: "";      /*clear contents */
+}
+
+
+/* creating a table */
+/* creat column , with % of viewport*/
+/* 
+   HOW IT WORKS :
+            - each column has summation of 100%
+            -e,g. col-1 * 12 = 100% = 12 cols
+            -e,g. col-6 * 2  = 100% = 2  cols
+            -e,g. col-4 * 3  = 100% = 3  cols
+
+*/
+.col-1  {width: 8.33%;}
+.col-2  {width: 16.66%;}
+.col-3  {width: 25%;}
+.col-4  {width: 33.33%;}
+.col-5  {width: 41.66%;}
+.col-6  {width: 50%;}
+.col-7  {width: 58.33%;}
+.col-8  {width: 66.66%;}
+.col-9  {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
+/*################################# Nav bar ##################*/
+ 
+/* defualts navbar sets */
+nav {
+    width: 100%; /* of the entire screen desk or mobile */
+    margin: o;
+}
+
+
+
+/* navbar list */
+nav ul {
+    background-color: #b3ffff;
+    overflow: hidden;   /* no scrolling when using mobile */
+    margin: 0;
+    padding: 0;
+}
+
+/* position of list */
+ul.topnav li {
+    list-style: none; /*off old style */
+    float: left;      /*ordering into left*/
+
+}
+
+
+ul.topnav li.topnav-right {
+    float: right;
+}
+
+
+/* font of list */
+ul.topnav li a {
+        display: block;
+        text-decoration: none;
+        min-height: 16px;  /* when it shrinks it will stay in same size */
+        text-align: center;
+        padding: 14px;  /* space among them */
+        text-transform: uppercase;
+        color:#001a00;
+        font-family: 'Oswald';
+        font-weight: 700;
+}
+
+ul.topnav li a:hover { 
+    background-color: #d580ff ;
+}
+
+
+/*drop down Icon */
+ul.topnav li.dropdownIcon {
+    display: none;    /* hide it for non-mobile view */
+}
+
+
+/*################################# custom styles ##################*/
+
+/* id's containers */
+#section-1-gradient {
+    background-image: linear-gradient(#ffb3ba, #ffe6e8);
+}
+
+
+
+
+
+/* leftside-col */
+div.leftSide-col {
+    margin-left: 30%;
+}
+
+/* righSide-col */
+div.rightSide-col {
+    margin-left: 15%;
+}
+
+/*style of 'h1' texts*/
+h1.large {
+    color:#0b594e;
+    font-family: 'Lobster', cursive;
+    font-size: 46px;
+    margin: 0;
+    line-height: 50px;
+
+}
+
+
+
+/* style 'h2' form */
+form h2 {
+    color:#108070;
+    
+}
+
+/* input boxes */
+input[type="text"] /*be specific to be sure :) */
+{
+    font-size: 20px;
+    width: 400px;
+    min-width: 100px;  /* if the media ger smaller, it will not be least than 100px*/
+    padding: 5px;
+    border-radius: 10px;
+    border-color: #0b594e;
+}
+
+
+
+
+
+/*################################# mobile ##################*/
+
+/* detect tablets, phones, ....etc */
+@media screen and (max-width: 680px) {
+
+    /* hide desktop features when the width's screen = 680px
+    except the first child in the list = 'Home' */
+    ul.topnav li:not(:nth-child(1)) {
+        display: none;
+    }
+
+    /* drop down list */
+    ul.topnav li.dropdownIcon {
+        display: block;  
+        float: right;  
+    }
+
+    /* make trigram icon always in the ritgh after click */
+    ul.topnav.responsive li.dropdownIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    /* drop down list on mobile mode */
+    ul.topnav.responsive {
+        position: relative;  /* dont change position or order of the list */
+    }
+
+    /* lined up the items of the list */
+    ul.topnav.responsive li {
+       display: inline; 
+       float: none;
+    }
+
+    /* anchor tag */
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+
+    /* col-6 */
+    .col-6 {
+        width: 100%;  /* full appears on mobile mode */
+        margin: 0;
+    }
+
+    /* grap 2 classes */
+    div.leftSide-col,
+    div.rightSide-col {
+        margin: 15px;
+    }
+
+    /* input field */
+    input [type='text'] {
+        width: 350px;
+    }
+    
+    /* video container */
+    /* you should be very specific in CSS while choosing class...etc */
+    .videoContainer iframe {
+        position: relative;  /* stay in the normal positon = 'realtive' */
+        width: 100%;         /* full screen in the column on mobile */
+        margin: 0;           /* no inherint */
+        overflow: hidden;    /* no inherint */
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

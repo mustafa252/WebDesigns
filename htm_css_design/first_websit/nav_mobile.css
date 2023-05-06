@@ -1,0 +1,127 @@
+
+
+/*############################## Defaults ####################/
+
+/* display the default elements as blocks */
+nav,
+header,
+footer {
+    display: block;
+}
+
+/* body */
+body {
+    line-height: 1; /* space between the text*/
+    margin: 0;      /* squeeze it with no defualt-margines*/
+}
+
+
+
+/*################################# Nav bar ##################*/
+ 
+/* defualts navbar sets */
+nav {
+    width: 100%; /* of the entire screen desk or mobile */
+    margin: o;
+}
+
+/* navbar list */
+nav ul {
+    background-color: #b3ffff;
+    overflow: hidden;   /* no scrolling when using mobile */
+    margin: 0;
+    padding: 0;
+}
+
+/* position of list */
+ul.topnav li {
+    list-style: none; /*off old style */
+    float: left;      /*ordering into left*/
+
+}
+
+ul.topnav li.topnav-right {
+    float: right;
+}
+
+
+/* font of list */
+ul.topnav li a {
+        display: block;
+        text-decoration: none;
+        min-height: 16px;  /* when it shrinks it will stay in same size */
+        text-align: center;
+        padding: 14px;  /* space among them */
+        text-transform: uppercase;
+        color:#001a00;
+        font-family: 'Oswald';
+        font-weight: 700;
+}
+
+ul.topnav li a:hover {
+    background-color: #d580ff ;
+}
+
+
+/*drop down Icon */
+ul.topnav li.dropdownIcon {
+    display: none;    /* hide it for non-mobile view */
+}
+
+
+/*################################# mobile ##################*/
+
+/* detect tablets, phones, ....etc */
+@media screen and (max-width: 680px) {
+
+    /* hide desktop features when the width's screen = 680px
+    except the first child in the list = 'Home' */
+    ul.topnav li:not(:nth-child(1)) {
+        display: none;
+    }
+
+    /* drop down list */
+    ul.topnav li.dropdownIcon {
+        display: block;  
+        float: right;  
+    }
+
+    /* make trigram icon always in the ritgh after click */
+    ul.topnav.responsive li.dropdownIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    /* drop down list on mobile mode */
+    ul.topnav.responsive {
+        position: relative;  /* dont change position or order of the list */
+    }
+
+    /* lined up the items of the list */
+    ul.topnav.responsive li {
+       display: inline; 
+       float: none;
+    }
+
+    /* anchor tag */
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

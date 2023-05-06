@@ -1,0 +1,64 @@
+
+
+/*############################## Defaults ####################/
+
+/* display the default elements as blocks */
+nav,
+header,
+footer {
+    display: block;
+}
+
+/* body */
+body {
+    line-height: 1; /* space between the text*/
+    margin: 0;      /* squeeze it with no defualt-margines*/
+}
+
+
+
+/*################################# Nav bar ##################*/
+ 
+/* defualts navbar sets */
+nav {
+    width: 100%; /* of the entire screen desk or mobile */
+    margin: o;
+}
+
+/* navbar list */
+nav ul {
+    background-color: #b3ffff;
+    overflow: hidden;   /* no scrolling when using mobile */
+    margin: 0;
+    padding: 0;
+}
+
+/* position of list */
+ul.topnav li {
+    list-style: none; /*off old style */
+    float: left;      /*ordering into left*/
+
+}
+
+ul.topnav li.topnav-right {
+    float: right;
+}
+
+
+/* font of list */
+ul.topnav li a {
+        display: block;
+        text-decoration: none;
+        min-height: 16px;  /* when it shrinks it will stay in same size */
+        text-align: center;
+        padding: 14px;  /* space among them */
+        text-transform: uppercase;
+        color:#001a00;
+        font-family: 'Oswald';
+        font-weight: 700;
+}
+
+ul.topnav li a:hover {
+    background-color: #d580ff ;
+}
+

@@ -1,0 +1,109 @@
+
+<html lang="en">
+
+    <head> 
+        <title> My CSS website </title>
+        <link rel="stylesheet" href="inframes.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">"
+    </head>
+    
+    <body> 
+        <!-- navbar-->
+        <nav>
+            <ul class="topnav" id="dropdownClick">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+    
+                <li class="topnav-right"><a href="#signup">Sign Up</a></li>
+                <li class="topnav-right"><a href="#signin">Sign In</a></li>
+
+                <li class="dropdownIcon"><a href="javascript:void(0);"onclick="dropdownMenu()">&#9776;</a></li>
+
+            </ul>
+    
+        </nav>
+
+        <!-- container -->
+        <div class="container" id="section-1-gradient">
+
+            <!-- 1st row -->
+            <div class="row">
+                <!-- 1st column-->
+                <div class="col-6">
+
+                            <!--add header tags inside this col.
+                                becuase in the future we may want to add style property to
+                                this groub, but right now we dont have one in mind but this
+                                plannig head fot the future just in case.[important for future projects]
+                            -->
+                    <div class="leftside-col">
+                        <h1 class="large">Crazy Radness</h1>
+                        <h1 class="large">Made for Developers</h1>
+                    </div>
+
+                            <!--creating Form-->
+                    <form>
+                        <div class="leftside-col">
+                            <h2><i>Username</i></h2>
+                                  <!--input field-->
+                            <input class="inputbox" name="usernam" type="text"
+                            placeholder="Username">
+
+                            <h2><i>Password</i></h2>
+                            <input class="inputbox" name="password" type="text"
+                            placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+
+                        <!-- 2nd column-->
+                <div class="col-6">
+                    <div class="rightSide-col">
+                            <!-- video -->
+                        <div class="videoContainer"> 
+                            <iframe width="560"
+                             height="315" 
+                             src="https://www.youtube.com/embed/RzVvThhjAKw?controls=0&amp;start=7"
+                             title="YouTube video player" 
+                             frameborder="0" 
+                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                             allowfullscreen></iframe>
+
+                        </div>
+
+                    </div>
+                </div>               
+            </div>
+        </div>
+
+    
+        <!-- javascript -->
+        <script>
+            function dropdownMenu() {
+
+                /*get class*/
+                var x = document.getElementById("dropdownClick");
+
+                /*chang class name into 'topnav.responsive' */
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    
+    
+    </body>
+    </html>
+
+<!-- 
+
+    - 'class': use it for adding styles
+    - 'id': use it for javascript
+    - 'javascript:void(0);' : the path you're trying to go into is undefined, so stay in the current state
+-->
+
+

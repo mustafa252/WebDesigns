@@ -1,0 +1,263 @@
+
+<html lang="en">
+
+    <head> 
+        <title>My CSS website</title>
+        <link rel="stylesheet" href="footer.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">"
+        <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+    </head>
+    
+    <body> 
+        <!-- navbar-->
+        <nav>
+            <ul class="topnav" id="dropdownClick">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+    
+                <li class="topnav-right"><a href="#signup">Sign Up</a></li>
+                <li class="topnav-right"><a href="#signin">Sign In</a></li>
+
+                <li class="dropdownIcon"><a href="javascript:void(0);"onclick="dropdownMenu()">&#9776;</a></li>
+
+            </ul>
+    
+        </nav>
+
+        <!-- container -->
+        <div class="container" id="section-1-gradient">
+
+            <!-- 1st row -->
+            <div class="row">
+                <!-- 1st column-->
+                <div class="col-6">
+
+                            <!--add header tags inside this col.
+                                becuase in the future we may want to add style property to
+                                this groub, but right now we dont have one in mind but this
+                                plannig head fot the future just in case.[important for future projects]
+                            -->
+                    <div class="leftside-col">
+                        <h1 class="large">Crazy Radness</h1>
+                        <h1 class="large">Made for Developers</h1>
+                    </div>
+
+                            <!--creating Form-->
+                    <form>
+                        <div class="leftside-col">
+                            <h2><i>Username</i></h2>
+                                  <!--input field-->
+                            <input class="inputbox" name="usernam" type="text"
+                            placeholder="Username">
+
+                            <h2><i>Password</i></h2>
+                            <input class="inputbox" name="password" type="text"
+                            placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+
+                        <!-- 2nd column-->
+                <div class="col-6">
+                    <div class="rightSide-col">
+                            <!-- video -->
+                        <div class="videoContainer"> 
+                            <iframe width="560" height="315" 
+                            src="https://www.youtube.com/embed/nHX9GB4XX8k" 
+                            title="YouTube video player" frameborder="0"
+                             allow="accelerometer; autoplay; clipboard-write;
+                              encrypted-media; gyroscope; picture-in-picture"
+                               allowfullscreen></iframe>
+
+                        </div>
+
+                    </div>
+                </div>               
+            </div>
+        </div>
+
+        
+             <!---header -->
+        <header>
+            <h1 class="section2Header">The Standard of Awesomeness</h1>
+
+        </header>
+
+             <!-- 2nd container -->
+        <div class="container-2">
+               <!-- 2nd row -->
+            <div class="row">
+                    <!-- 1st col -->
+                <div class="col-4">
+                       <!-- box -->
+                    <div class="box">
+                           <!-- icones-->
+                        <div class="chatIcone">
+                            <img src="chat2.png" width="100px" height="100px">
+                        </div>
+                            <!-- 1st label-->
+                        <label>Chat with Me</label>
+                            <!-- chat text  -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore.</p>                      
+                    </div>
+                </div>
+
+                <!-- 2nd col -->
+                <div class="col-4">
+                    <!-- box -->
+                    <div class="box">
+                        <!-- icones-->
+                        <div class="codeIcone">
+                            <img src="code4.png" width="100px" height="100px">
+                        </div>
+                            <!-- 2nd label-->
+                        <label>Learn to code</label>
+                            <!-- chat text  -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore.</p>                   
+                    </div>
+                </div>
+
+                <!-- 3rd col -->
+                <div class="col-4">
+                    <!-- box -->
+                    <div class="box">
+                        <!-- icones-->
+                        <div class="EmpireIcone">
+                            <img src="emp1.png" width="100px" height="100px">
+                        </div>
+                            <!-- 3rd label-->
+                        <label>Build an Empire</label>
+                            <!-- chat text  -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore.</p>               
+                    </div>
+                </div>               
+            </div> 
+                 <!-- 2nd row under boxes -->
+            <div class="row">
+                     <!-- this row contains 1 col. -->
+                <div class="col-12">
+                          <!-- button-->
+                    <button class="learnMore"> learn more </button>
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+              <!--- container -->
+        <div class="container">
+               <!-- 2nd row -->
+            <div class="row">
+                     <!-- 1st col.-->
+                <div class="col-7">
+                        <!-- article-->
+                    <article>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    </article>
+                </div>
+                    <!-- 2nd col.-->
+                    <!-- col-7 + col-5 = col-12 = 100%-->
+                <div class="col-5">
+                        <!-- iosIcon-->
+                    <div class="iosIcon">
+                        <img src="ios1.png">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+           <!--footer -->
+        <footer  class="footsy">
+              <!-- 3rd row -->
+            <div class="row">
+
+                  <!-- 1st col-->
+                <div class="col-3 mobileStack">
+                      <!-- h1 tag-->
+                    <h1>Company</h1>
+                        <!-- list -->
+                    <ul>
+                        <li>About</li>
+                        <li>Blogs</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+
+                    <!-- 2nd col-->
+                <div class="col-3 mobileStack">
+                    <!-- h1 tag-->
+                    <h1>Products</h1>
+                        <!-- list -->
+                    <ul>
+                        <li>Computers</li>
+                        <li>iPads</li>
+                        <li>iPhones</li>
+                    </ul>
+                </div>
+
+                   <!-- 3rd col-->
+                <div class="col-3 mobileStack">
+                    <!-- h1 tag-->
+                    <h1>Learn More</h1>
+                        <!-- list -->
+                    <ul>
+                        <li>Developers</li>
+                        <li>Designers</li>
+                        <li>Hackers</li>
+                    </ul>
+                </div>
+
+                    <!-- 4th col-->
+                 <div class="col-3 mobileStack">
+                    <!-- h1 tag-->
+                    <h1>support</h1>
+                        <!-- list -->
+                    <ul>
+                        <li>Help</li>
+                        <li>QA</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+
+    
+        <!-- javascript -->
+        <script>
+            function dropdownMenu() {
+
+                /*get class*/
+                var x = document.getElementById("dropdownClick");
+
+                /*chang class name into 'topnav.responsive' */
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    
+    
+    </body>
+    </html>
+
+<!-- 
+
+    - 'class': use it for adding styles
+    - 'id': use it for javascript
+    - 'javascript:void(0);' : the path you're trying to go into is undefined, so stay in the current state
+-->
+
+

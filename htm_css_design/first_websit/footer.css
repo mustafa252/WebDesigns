@@ -1,0 +1,395 @@
+
+
+/*############################## Defaults ####################/
+
+/* display the default elements as blocks */
+nav,
+header,
+footer {
+    display: block;
+}
+
+/* body */
+body {
+    line-height: 1; /* space between the text*/
+    margin: 0;      /* squeeze it with no defualt-margines*/
+}
+
+/* styling label */
+label {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+/* chat text */
+p {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+/* article */
+article p {
+    font-size: 35px;
+    /* better to use 'padding' instead of 'margin' to get space from left
+    so we do not take the right side space */
+    padding: 20px; 
+    padding-right: 50px;  
+}
+
+
+/* 1st container */
+.container {
+    width: 100%;          /* full display */
+    margin: auto;        /* center */
+    padding-top: 4%;     /* space up */
+    padding-bottom: 4%;  /* space down */
+}
+
+/* row */
+.row {
+    width: 100%;
+    display: flex;        /* help the contains of the row to change siz */
+    flex-wrap: wrap;      /* wrap up the contents */
+    align-items: center;
+
+}
+
+/*  settings for new rows */
+.row::after {
+    display: table;   /* block */
+    clear: both;      /*removes any inheritting floats from right or left..etc*/
+    content: "";      /*clear contents */
+}
+
+
+/* creating a table */
+.col-1  {width: 8.33%;}
+.col-2  {width: 16.66%;}
+.col-3  {width: 25%;}
+.col-4  {width: 33.33%;}
+.col-5  {width: 41.66%;}
+.col-6  {width: 50%;}
+.col-7  {width: 58.33%;}
+.col-8  {width: 66.66%;}
+.col-9  {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/* apply on all elements */
+
+* {
+    /* just include the 'padding' & 'margin' to the size of the element
+       to more adjust columns 
+    */
+
+    box-sizing: border-box; 
+    
+}
+
+
+/*################################# Nav bar ##################*/
+ 
+/* defualts navbar sets */
+nav {
+    width: 100%; /* of the entire screen desk or mobile */
+    margin: o;
+}
+
+
+
+/* navbar list */
+nav ul {
+    background-color: #b3ffff;
+    overflow: hidden;   /* no scrolling when using mobile */
+    margin: 0;
+    padding: 0;
+}
+
+/* position of list */
+ul.topnav li {
+    list-style: none; /*off old style */
+    float: left;      /*ordering into left*/
+
+}
+
+
+ul.topnav li.topnav-right {
+    float: right;
+}
+
+
+/* font of list */
+ul.topnav li a {
+        display: block;
+        text-decoration: none;
+        min-height: 16px;  /* when it shrinks it will stay in same size */
+        text-align: center;
+        padding: 14px;  /* space among them */
+        text-transform: uppercase;
+        color:#001a00;
+        font-family: 'Oswald';
+        font-weight: 700;
+}
+
+ul.topnav li a:hover { 
+    background-color: #d580ff ;
+}
+
+
+/*drop down Icon */
+ul.topnav li.dropdownIcon {
+    display: none;    /* hide it for non-mobile view */
+}
+
+
+/*################################# custom styles ##################*/
+
+/* id's containers */
+#section-1-gradient {
+    background-image: linear-gradient(#ffb3ba, #ffe6e8);
+}
+
+/* all boxes */
+div.box {
+    background-color: #fff;
+    text-align: center;
+    margin: 24px;                      /*space between boxes*/
+    padding: 36px 24px 40px 24px;      /* top - right - bottom - left */
+    border-radius: 7px;                /* box edges round */
+    /* https://www.cssmatic.com/box-shadow */
+    /* also we add 2nd layer to make the edge around */
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15),
+    0 2px 3px 0 rgba(0,0,0,.1);
+   
+}
+
+/* ios-icon */
+div.iosIcon img {
+    display: block;
+    margin: auto;
+    /* 'H' 'V' 'Bl' 'Spr' rgba(shad, backgr, box, opac) */
+    box-shadow: -2px -2px 5px 20px rgba(0,0,0,.15),
+    2px 2px 17px 2px rgba(0,0,0,1);      
+
+}
+
+/* button*/
+button {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffd166;
+    background-color: #4ea8de;
+    padding: 15px 60px;   
+    display: block;
+    text-align: center;
+    margin: 5px;
+    border-radius: 7px;
+
+}
+
+/* button 'learnMore' */
+button.learnMore {
+    display: block;
+    margin: auto;    /* center it */
+    margin-bottom: 60px;
+    
+}
+
+/* chat icones */
+div.chatIcone {
+    width: 100%;
+
+}
+
+/* leftside-col */
+div.leftSide-col {
+    margin-left: 30%;
+}
+
+/* righSide-col */
+div.rightSide-col {
+    margin-left: 15%;
+}
+
+/*style of 'h1' texts*/
+h1.large {
+    color:#0b594e;
+    font-family: 'Lobster', cursive;
+    font-size: 46px;
+    margin: 0;
+    line-height: 50px;
+
+}
+
+/* style of 'header 2'*/
+h1.section2Header {
+    font-size: 65px;
+    text-align: center;
+    font-family: 'Oleo Script', cursive;
+    color:#5bb0f0;
+    font-weight: 1000;
+}
+
+
+
+/* style 'h2' form */
+form h2 {
+    color:#108070;
+    
+}
+
+/* input boxes */
+input[type="text"] /*be specific to be sure :) */
+{
+    font-size: 20px;
+    width: 400px;
+    min-width: 100px;  /* if the media ger smaller, it will not be least than 100px*/
+    padding: 5px;
+    border-radius: 10px;
+    border-color: #0b594e;
+}
+
+
+/* footer row */
+footer.footsy {
+    background-color:#8ecae6;
+    padding-left: 10%;
+}
+
+/* footer header */
+footer.footsy h1 {
+    color: #14213d;
+    font-size: 35px;
+}
+
+/* footer list */
+footer.footsy ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 0px;
+}
+
+/* footer list's items */
+footer.footsy ul li {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #33415c;
+}
+
+/*################################# mobile ##################*/
+
+/* detect tablets, phones, ....etc */
+@media screen and (max-width: 680px) {
+
+    /* hide desktop features when the width's screen = 680px
+    except the first child in the list = 'Home' */
+    ul.topnav li:not(:nth-child(1)) {
+        display: none;
+    }
+
+    /* drop down list */
+    ul.topnav li.dropdownIcon {
+        display: block;  
+        float: right;  
+    }
+
+    /* make trigram icon always in the ritgh after click */
+    ul.topnav.responsive li.dropdownIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    /* drop down list on mobile mode */
+    ul.topnav.responsive {
+        position: relative;  /* dont change position or order of the list */
+    }
+
+    /* lined up the items of the list */
+    ul.topnav.responsive li {
+       display: inline; 
+       float: none;
+    }
+
+    /* anchor tag */
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+
+    /* article */
+    article p {
+        font-size: 25px;
+    }
+
+    /* col-6 */
+    .col-6,
+    .col-4,
+    .col-7,
+    .col-5 {
+        width: 100%;  /* full appears on mobile mode */
+        margin: 0;
+    }
+
+    /* footer cols */
+    div.mobileStack {
+        width: 50%;
+        display: block;
+    } 
+
+    /*ios-icon col*/
+    div.iosIcon {
+        margin: 10px;   /*make space around the column that contains the image */
+    }
+
+    /*ios-icon img*/
+    div.iosIcon img {
+      width: 100%;     /*display it in mobile */
+      
+    }
+
+
+    /* boxes */
+    div.box {
+        padding: 5px;    /* reduce top spaces */
+        display: block;  /* just to make sure to displat it as a block */
+    }
+
+    /* grap 2 classes */
+    div.leftSide-col,
+    div.rightSide-col {
+        margin: 15px;
+    }
+
+    /* input field */
+    input [type='text'] {
+        width: 350px;
+    }
+    
+    /* video container */
+    /* you should be very specific in CSS while choosing class...etc */
+    .videoContainer iframe {
+        position: relative;  /* stay in the normal positon = 'realtive' */
+        width: 100%;         /* full screen in the column on mobile */
+        margin: 0;           /* no inherint */
+        overflow: hidden;    /* no inherint */
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
