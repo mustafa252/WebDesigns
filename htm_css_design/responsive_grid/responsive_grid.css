@@ -1,0 +1,351 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'BenchNine', sans-serif;
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+/* define variables */
+:root {
+    --primary: #ddd;
+    --dark: black;
+    --light: #fff;
+    --shadow:-7px 9px 5px 0px rgba(117,113,117,1);
+}
+
+body {
+    background-color: #ccdbfd;
+    margin: 3opx 50px;
+    line-height: 1.4;
+}
+
+
+/* make links as buttons */
+.btn {
+
+    background-color: #00b4d8;
+    color: black;
+    padding: 0.6rem 1.3rem;
+    border:2.8px solid;
+    border-radius: 8px;
+    border-color: rebeccapurple;
+    text-decoration: none;
+
+    /* Effect Style #1 */
+    /* transition-duration: 100ms; */
+
+
+    /* Effect Style #2 */
+    transition-property: background;
+    transition-duration: 250ms; 
+    background-position: center;
+    background-image: radial-gradient(circle, transparent 1%, #ffafcc 1%);
+    background-size: 12000%;
+    
+    
+
+
+}
+
+/* hover */
+.btn:active {
+
+    /* Effect Style #1 */
+
+    /* background-color: #ffafcc;  
+    color: black;
+    border: 1px solid ;
+    border-color: #212529;
+    transition-property: background; */
+
+    /* Effect Style #2 */
+    background-color: #ffafcc;
+    color: black;
+    transition-property: background;
+    transition-duration: 150ms; 
+    background-size: 100%;
+
+}
+
+
+/* Wrapper */
+.wrapper {
+
+    display: grid;
+    grid-gap: 20px;
+
+}
+
+
+
+/* Navbar list*/
+.main-nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 350px);
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+/* Navbar link shape */
+.main-nav  a {
+
+    background-color: #48cae4;
+    padding: 0.4rem 1.4rem;
+    box-shadow: var(--shadow); 
+    border: 0.5px solid;  
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin:18px;
+    
+}
+
+/* Navbar link press */
+.main-nav ul a:active {
+
+    background-color: #ffafcc;
+    padding: 0.4rem 1.4rem;
+    box-shadow: none;
+    border: 2px solid;      
+}
+
+
+/* top container */
+.top-container {
+
+    display: grid;
+    grid-gap: 10px;
+
+    grid-template-areas: 'showcase  showcase top-box-a' 'showcase  showcase top-box-b';
+
+}
+
+.showcase {
+    grid-area: showcase;  
+    min-height: 400px;
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-box {
+    display: grid;
+    background-color: #48cae4;
+    padding: 1.5rem;
+    box-shadow: var(--shadow); 
+    border: 0.5px solid;  
+    border-radius: 5px;
+    align-items: center;
+    justify-items: center;
+
+}
+.top-box-a {
+
+    grid-area: top-box-a ;
+}
+
+.top-box-b {
+    grid-area: top-box-b ;
+   
+}
+
+
+
+/* Boxes class */
+.boxes {
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* box shape */
+.boxes .box {
+    background-color: #48cae4;
+    padding: 0.4rem 1.4rem;
+    box-shadow: var(--shadow); 
+    border: 0.5px solid;  
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 3px 18px;
+    
+}
+
+.boxes .box p{
+    font-weight: 500;
+    color: black;
+}
+
+
+/* info class */
+.info {
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #48cae4;
+    padding: 0.4rem 1.4rem;
+    box-shadow: var(--shadow); 
+    border: 0.5px solid;  
+    border-radius: 5px;
+    text-align: center;
+}
+
+.info p {
+    font-weight: 500;
+    color: black;
+    font-size: 20px;
+}
+
+/* portfolio class */
+.portfolio {
+    display: inline-block;
+    
+    justify-self: center;
+}
+
+
+.portfolio img{
+
+    padding: 1rem;
+    height: 300px;
+    width: 350px;        
+}
+
+
+/* footer class */
+footer p{
+
+    display: block;
+    background-color:#48cae4;
+    text-align: center;
+    padding: 15px;
+    
+
+}
+
+/* media */
+@media (max-width: 680px) {
+            
+        /* Navbar list*/
+        .main-nav ul {
+            display: inline;
+            
+        }
+
+        /* Navbar link shape */
+        .main-nav  a {
+
+            background-color: #48cae4;
+            padding: 0.4rem;
+            box-shadow: var(--shadow); 
+            border: 0.5px solid;  
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            
+            margin:10px 0px;
+            display:flex;
+            flex-direction: column;
+            width:100%;    
+        }
+        /* Navbar link press */
+        .main-nav ul a:active {
+
+            background-color: #ffafcc;
+            padding: 0.4rem;
+            box-shadow: none;
+            border: 2px solid;      
+        }
+        
+        /* top container */
+        .top-container {
+
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: 'showcase' 'top-box-a' 'top-box-b';
+
+        }
+        
+        .showcase {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            width: 100%;
+            margin:5px 0px;
+        }
+        
+        .top-box {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-items: center;
+            margin:5px 0px;
+        
+        }
+
+
+        /* Boxes class */
+        .boxes {
+            display:inline;
+            justify-content: center;
+            
+        }
+
+        .boxes .box {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin:5px 0px;
+            
+        }
+
+        /* info class */
+        .info {
+
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 20px;
+            
+            
+        }
+
+        .info img {
+               
+            width: 100%;
+            
+        }
+
+       
+        
+        /* portfolio class */
+        .portfolio{   
+            display: inline;
+        }
+        .portfolio img {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin:5px 0px;
+        }
+
+
+  }
+
+

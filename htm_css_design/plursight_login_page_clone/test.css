@@ -1,0 +1,83 @@
+
+/* import font family */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+
+body {
+
+
+    font-family: 'Fugaz One', cursive;
+    font-weight: 100;
+    background-color: #adb5bd;
+    color:#212529;
+    
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+
+    font-weight: 100;
+}
+
+
+a {
+    color: #343a40;
+    font-weight: 100;
+}
+
+
+/* container */
+#wrapper {
+
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+/* left-side */
+#left {
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* right-side */
+#right{
+
+    flex: 1;
+}
+
+
+/* sign-in */
+#signIn {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding-bottom: 1rem;
+}
+
+
+/* form */
+#signIn form {
+
+    width: 80%;
+    padding-bottom: 3rem;
+}
+
+
+/* logo */
+#signIn .logo {
+
+    margin-bottom: 8vh;
+}
+
+
+

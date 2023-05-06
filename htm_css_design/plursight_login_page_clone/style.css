@@ -1,0 +1,322 @@
+
+* {
+    box-sizing: border-box;
+}
+/* import font family */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+
+body {
+
+
+    font-family: 'Fugaz One', cursive;
+    font-weight: 100;
+    background-color: #adb5bd;
+    color:#212529;
+    
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+
+    font-weight: 100;
+}
+
+
+a {
+    color: #343a40;
+    font-weight: 100;
+}
+
+
+/* container */
+#wrapper {
+
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+/* left-side */
+#left {
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* right-side */
+#right{
+
+    flex: 1;
+}
+
+/* ##################################################################################################### */
+/* ################### Left-Side ####################################################################### */
+
+/* sign-in */
+#signIn {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding-bottom: 1rem;
+}
+
+
+/* form */
+#signIn form {
+
+    width: 80%;
+    padding-bottom: 3rem;
+       
+}
+
+
+/* logo block*/
+#signIn .logo {
+
+    margin-bottom: 8vh;
+}
+
+
+/* image */
+#signIn .logo img {
+
+    width: 300px;
+}
+
+/* label */
+#signIn label {
+
+   font-size: 0.9rem;
+   line-height: 2rem;
+   font-weight: 500;    
+}
+
+/* text-input */
+#signIn .text-input {
+
+    margin-bottom: 1.3rem;
+    width: 100%;
+
+    border-radius: 6px;
+    line-height: 1.3rem;
+    border: 1ffpx solid #212529;
+    color: #212529;
+    padding: 0.5rem 1rem;
+}
+
+/* Primary Button */
+#signIn .primary-btn {
+
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 500;
+    background: #212529;
+    color: #adb5bd;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.5s;
+    transition-property: width;
+    width: 100%;
+    font-weight: 900;
+}
+
+/* hover Primary-button */
+#signIn .primary-btn:hover
+{
+    color: #212529;
+    background-color: #adb5bd;
+    border: 1px solid ;
+    border-color: #212529;
+}
+
+/* Secondary Button : create Account + free trial */
+.secondary-btn {
+
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 500;
+    background: #212529;
+    color: #adb5bd;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.5s;
+    transition-property: width;
+    width: 100%;
+    font-weight: 900;
+}
+
+/* hover Secondary button : create Account + free trial */
+.secondary-btn:hover
+{
+    color: #212529;
+    background-color: #adb5bd;
+    border: 1px solid ;
+    border-color: #212529;
+}
+
+/* make the other elements except the form in the left sid
+ into 60% */
+
+#signIn .secondary-btn, .links, .or {
+
+    width: 60%;
+ }
+
+
+/* links */
+#signIn .links a{
+
+    display: block;
+    text-align: center;
+    line-height: 13px;
+    margin-bottom: 1rem;
+    color: #343a40;
+    font-weight: 200;
+
+}
+
+/* OR */
+#signIn .or {
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.2rem;
+}
+
+
+/* OR bar */
+#signIn .or .bar {
+
+    flex: auto;
+    background: #212529;
+    height: 1px;
+}
+
+/* OR span */
+#signIn .or span {
+
+    color: #212529;
+    padding: 0 0.8rem;
+}
+
+
+/* footer block */
+#main-footer {
+
+    text-align: center;
+    font-size: 0.8rem;
+    max-width: 80%;
+    padding-top: 1rem;
+}
+
+/*footer links */
+#main-footer a {
+
+    text-decoration: underline;
+    color: black;
+}
+
+/* ##################################################################################################### */
+/* ################### Right-Side ####################################################################### */
+
+/* showcase */
+#showcase {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url('3.png') no-repeat center center / cover;
+  
+}
+
+#showcase .showcase-text {
+    font-size: 3rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  #showcase .secondary-btn {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+
+/* ##################################################################################################### */
+/* ################### Media ####################################################################### */
+
+/* width => 1200px */
+
+
+@media(min-width: 1200px) {
+
+    #left {
+
+        flex: 4;
+    }
+
+    #right {
+
+        flex: 6;
+    }
+}
+
+/* for smaller screen (tablet, mobile, ...)*/
+/* width => 780px */
+@media (max-width: 780px) {
+
+    /* add scroll when necessary */
+    body {
+        overflow: auto;
+    }
+
+    /* hide right-side */
+    #right {
+        display: none;
+    }
+
+    /* make it begin from the start of screen (up) */
+    #left {
+        justify-content: start;
+        margin-top: 2vh;
+    }
+
+    /* reduce space between logo and form */
+    #signIn .logo {
+
+        margin-bottom: 4vh;
+    }
+
+    /* reduce space between text input form */
+    #signIn .text-input {
+
+        margin-bottom: 0.3rem;
+    }
+
+    /* increase space between Primary Button and form */
+    #signIn .primary-btn {
+        margin-top: 0.7rem;
+    }
+}
+
+

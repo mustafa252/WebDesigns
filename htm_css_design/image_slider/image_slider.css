@@ -1,0 +1,30 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin-top: 0.7rem;
+}
+
+body {
+
+    background-color:aquamarine;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    overflow: hidden;
+}
+
+
+.slider {
+    width: 500%;
+    display: flex;
+}
+
+
+
+
